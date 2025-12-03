@@ -8,13 +8,22 @@ namespace jdv {
 
     Regle::~Regle() {}
 
-    int Regle::getValeur() {
-        return valeur;
+    int Regle::getVal1() {
+        return val1;
     }
 
-    int Regle::setValeur(int valeur) {
-        this->valeur = valeur;
-        return this->valeur;
+    int Regle::setVal1(int val1) {
+        this->val1 = val1;
+        return this->val1;
+    }
+
+    int Regle::getVal2() {
+        return val2;
+    }
+
+    int Regle::setVal2(int val2) {
+        this->val2 = val2;
+        return this->val2;
     }
 
 }

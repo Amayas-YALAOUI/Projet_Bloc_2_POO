@@ -9,13 +9,15 @@ namespace jdv {
         public :
             Regle();
             ~Regle();
-            int getValeur();
-            int setValeur(int);
-            virtual bool jugement(Cellule*, int);
+            int getVal1();
+            int setVal1(int);
+            int getVal2();
+            int setVal2(int);
+            virtual bool jugement(Cellule*, int, int);
         private :
-            int valeur;
+            int val1;
+            int val2;
 
-;
 
 };
 }
