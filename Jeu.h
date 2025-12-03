@@ -1,9 +1,17 @@
-#iostream
+#include <iostream>
+#pragma once
+#include "Cellule.h"
+#include "Regle.h"
+#include "Grille.h"
+#include "TransCellule.h"
+#include "Adjacence.h"
+
 namespace jdv{
-    class Jeu {
+    class Jeu{
         public:
-            jeu()
-            void fonctionnement(vector<vector<bool>>)
-            ~jeu()
+            jeu();
+            vector<vector<*Cellule>> fonctionnement(Grille);
+            ~jeu();
+        private:
     }
 }
