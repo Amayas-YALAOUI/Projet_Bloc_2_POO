@@ -8,9 +8,10 @@ namespace jdv {
         public :
             Etat();
             ~Etat();
+            int getCPT();
             
         private :
-            int cpt;
+            static int cpt;
             string chemin;
 
 };
