@@ -9,5 +9,4 @@ namespace jdv{
             void Choix_Etat(str);
             ~App();
     }
-
 }
