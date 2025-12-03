@@ -1,13 +1,13 @@
 #pragma once
-#include "Cellule.cpp"
+#include <iostream>
 #include "Cellule.h"
 #include <String>
 namespace jdv {
-    class Vivant{
+    class Vivant : public Cellule{
         public:
-            Vivant()
-            ~Vivant()
+            Vivant();
+            Cellule(int x,int y);
+            ~Vivant();
         private:
-            string couleur = "noir"
     };
 }
