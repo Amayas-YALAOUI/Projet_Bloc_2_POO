@@ -1,5 +1,6 @@
 #include <iostream>
 #pragma once
+#include <vector>
 #include "Jeu.h"
 #include "Transgrille.h"
 #include "GUI.h"
@@ -10,7 +11,7 @@ namespace jdv{
     class App{
         public:
             App();
-            void Choix_Etat(str);
+            void Choix_Etat(string, int, string, string);
             ~App();
     }
 }
