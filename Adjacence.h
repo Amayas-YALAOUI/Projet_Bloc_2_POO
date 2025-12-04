@@ -8,6 +8,6 @@ class Adjacence{
     public:
         Adjacence();
         ~Adjacence();
-        int Population(*Cellule cellule);
+        int Population(*Cellule, Grille);
 }
 }
