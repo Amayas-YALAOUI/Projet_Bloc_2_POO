@@ -7,7 +7,7 @@ namespace jdv{
 class TransCellule{
     public:
     TransCellule();
-    void Transformation(*Cellule, *Grille);
+    void Transformation(*Cellule, Grille);
     ~TransCellule();
 };
 }
