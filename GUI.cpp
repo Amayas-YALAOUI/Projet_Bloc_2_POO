@@ -8,9 +8,8 @@ GUI::GUI(int x, int y){
     this->y = y;
 }
 
-void GUI::Afficher(Grille* grille, sf::RenderWindow &window){
+void GUI::Afficher(std::vector<std::vector<int>>, sf::RenderWindow &window){
     sf::RenderWindow window(sf::VideoMode(x * cellSize, y * cellSize), "Game of Life");
-
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
@@ -21,14 +20,14 @@ void GUI::Afficher(Grille* grille, sf::RenderWindow &window){
         sf::RectangleShape cell(sf::Vector2f(cellSize - 1.0f, cellSize - 1.0f));
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
-                if (dynamic_cast<Vivant>(*grille->grille[i][j])) {
+                if (damier[i][j] == 1){
                     cell.setPosition(x * cellSize, y * cellSize);
                     window.draw(cell);
                 }
             }
         }
         window.display();
-        sf::sleep(sf::milliseconds(100));
+        sf::sleep(sf::milliseconds(1000));
     }   
 }
 }

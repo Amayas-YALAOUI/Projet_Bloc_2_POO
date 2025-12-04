@@ -3,13 +3,14 @@
 #include <vector>
 #include <ctime>
 #include <cstdlib>
+#include "Grille.h"
 
 namespace jdv{
 
 class GUI{
     public:
         GUI(int, int);
-        void Afficher(Grille*, sf::RenderWindow &window);
+        void Afficher(std::vector<std::vector<int>>, sf::RenderWindow &window);
         ~GUI();
     private:
         int x;
