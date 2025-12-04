@@ -32,16 +32,20 @@ Grille TransGrille::Trans_int_cel(std::vector<std::vector<int>> grille_int){
 std::vector<std::vector<int>> Trans_cel_int(Grille grille){
     x = grille.get_x();
     y = grille.get_y();
-    grille_int = std::vector<std::vector<int>>;
+    std::vector<std::vector<int>> grille_int;
+    for (int i =0; i<x; i++){
+        grille_int.push_back(std::vector<int>);
+        for (int j = 0; j<y; j++){
+            grille_int[i].push_back(0);
+        }
+    }
     for (int i = 0; i<x; i++){
         for (int j = 0; j<y; j++){
-            if (grille_int[i][j] == 1){
-                *Vivant new_cel_viv = Vivant(i, j);
-                grille_int[i][j] = new_cel_viv;
+            if (dynamic_cast<*Vivant>(grille.get_grille()[i][j])){
+                grille_int[i][j] = 1;
             }
-            if (grille_int[i][j] == 0){
-                *Mort new_cel_mor = Mort(i, j);
-                grille_int[i][j].set_cellule(new_cel_mor);
+            if (dynamic_cast<*Vivant>(grille.get_grille()[i][j])){
+                grille_int[i][j] = 0;
             }
         }
     }
