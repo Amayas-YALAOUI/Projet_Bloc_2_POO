@@ -8,6 +8,5 @@ namespace jdv {
             Vivant();
             Cellule(int x,int y);
             ~Vivant();
-        private:
     };
 }
