@@ -44,7 +44,7 @@ std::vector<std::vector<int>> Trans_cel_int(Grille grille){
             if (dynamic_cast<*Vivant>(grille.get_grille()[i][j])){
                 grille_int[i][j] = 1;
             }
-            if (dynamic_cast<*Vivant>(grille.get_grille()[i][j])){
+            if (dynamic_cast<*Mort>(grille.get_grille()[i][j])){
                 grille_int[i][j] = 0;
             }
         }
