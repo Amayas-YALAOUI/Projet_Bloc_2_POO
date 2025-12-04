@@ -9,9 +9,9 @@ namespace jdv {
 
     Necro::~Necro() {}
 
-    bool Necro::jugement(Cellule* cell, int val1, int val2) {
+    bool Necro::jugement(Cellule* cell, int val1, int val2, Grille grille) {
         Adjacence r;
-        if (r.adjacence(cell*) < val1 && r.adjacence(cell*) > val2){
+        if (r.Population(cell, grille) < val1 && r.Population(cell, grille) > val2){
             return 1;
         }
         else {

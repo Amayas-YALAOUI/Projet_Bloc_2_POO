@@ -6,10 +6,12 @@ namespace jdv{
 Grille::Grille(int x, int y){
     this-> x = x;
     this-> y = y;
+    std::vector<Cellule*> a;
+    Cellule* b;
     for (int i = 0; i<x; i++){
-        grille.push_back(std::vector<Cellule*>);
+        grille.push_back(a);
         for (int j = 0; j<y; j++){
-            grille[i].push_back(*Cellule);
+            grille[i].push_back(b);
         }
     }
 }
@@ -22,18 +24,18 @@ int Grille::get_y(){
     return y;
 }
 
-std::vector<std::vector<*Cellule>> Grille::get_grille(){
+std::vector<std::vector<Cellule*>> Grille::get_grille(){
     return grille;
 }
-void Grille::set_cellule(*Cellule cellule){
-    int i = *Cellule->get_x();
-    int j = *Celluel->get_y();
-    if (dynamic_cast<Vivant>(*cellule)){
-            grille[i][j] = *cellule;
+void Grille::set_cellule(Cellule* cellule){
+    int i = cellule->get_x();
+    int j = cellule->get_y();
+    if (dynamic_cast<Vivant*>(cellule)){
+        grille[i][j] = cellule;
     }
     else{
-        dynamic_cast<Mort>(*cellule);
-        grille[i][j] = *cellule;
+        dynamic_cast<Mort*>(cellule);
+        grille[i][j] = cellule;
     }
 }
 }

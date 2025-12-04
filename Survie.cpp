@@ -9,10 +9,10 @@ namespace jdv {
 
     Survie::~Survie() {}
 
-    bool Survie::jugement(Cellule* cell, int val1, int val2){
-        if (dynamic_cast<Vivant>(cell*)){
+    bool Survie::jugement(Cellule* cell, int val1, int val2, Grille grille){
+        if (dynamic_cast<Vivant*>(cell)){
         Adjacence r;
-        if (r.adjacence(cell*) <= val1 && r.adjacence(cell*) >= val2){
+        if (r.Population(cell, grille) <= val1 && r.Population(cell, grille) >= val2){
             return 1;
         }
         else {

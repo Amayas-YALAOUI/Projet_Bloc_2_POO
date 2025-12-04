@@ -10,6 +10,6 @@ namespace jdv {
         public :
             Naissance();
             ~Naissance();
-            bool jugement(Cellule*, int, int);
+            bool jugement(Cellule*, int, int, Grille);
     };
 }

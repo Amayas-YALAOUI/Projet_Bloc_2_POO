@@ -1,6 +1,8 @@
 #pragma once
 #include <vector>
 #include "Cellule.h"
+#include "Vivant.h"
+#include "Mort.h"
 namespace jdv{
 
 class Grille{
@@ -9,11 +11,11 @@ class Grille{
         ~Grille();
         int get_x();
         int get_y();
-        std::vector<std::vector<*Cellule>> get_grille();
-        void set_cellule(*Cellule);
+        std::vector<std::vector<Cellule*>> get_grille();
+        void set_cellule(Cellule*);
     private:
         int x;
         int y;
-        std::vector<std::vector<*Cellule>> grille;
+        std::vector<std::vector<Cellule*>> grille;
 };
 }

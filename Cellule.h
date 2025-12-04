@@ -7,8 +7,8 @@ namespace jdv{
             int get_x();
             void set_y(int);
             int get_y(); 
-            Cellule (int,int);
-            ~Cellule ();
+            Cellule(int,int);
+            virtual ~Cellule() noexcept = default;
         private:
             int x;
             int y;

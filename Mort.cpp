@@ -1,10 +1,7 @@
 #include "Mort.h"
 
 namespace jdv{
-    Mort::Mort(){   
-    }
-    Mort::Mort:Cellule(int x,int y){
-    }
-    Mort::~Mort(){   
-    }
+    Mort::Mort() : Cellule(0, 0) {}
+    Mort::Mort(int x, int y) : Cellule(x, y) {}
+
 }

@@ -5,15 +5,19 @@
 #include "Grille.h"
 #include "TransCellule.h"
 #include "Adjacence.h"
+#include "Survie.h"
+#include "Deces.h"
+#include "Naissance.h"
+#include "Necro.h"
 
 using namespace std;
 
 namespace jdv{
     class Jeu{
         public:
-            jeu();
-            vector<vector<*Cellule>> fonctionnement(Grille);
-            ~jeu();
+            Jeu();
+            vector<vector<Cellule*>> fonctionnement(Grille);
+            ~Jeu();
         private:
-    }
+    };
 } 

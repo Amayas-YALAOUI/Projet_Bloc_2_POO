@@ -1,12 +1,12 @@
 #pragma once
 #include <iostream>
 #include "Cellule.h"
-#include <String>
+#include <string>
 namespace jdv {
     class Vivant : public Cellule{
         public:
             Vivant();
-            Cellule(int x,int y);
-            ~Vivant();
+            Vivant(int x, int y);
+            ~Vivant() noexcept override = default;
     };
 }

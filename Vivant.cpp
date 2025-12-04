@@ -1,10 +1,7 @@
 #include "Vivant.h"
 
 namespace jdv{
-    Vivant::Vivant(){   
-    }
-    Vivant::Vivant:Cellule(int x,int y){
-    }
-    Vivant::~Vivant(){   
-    }
+    Vivant::Vivant() : Cellule(0, 0) {}
+    Vivant::Vivant(int x, int y) : Cellule(x, y) {}
+
 }

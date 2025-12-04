@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include "Cellule.h"
+#include "Grille.h"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ namespace jdv {
             int setVal1(int);
             int getVal2();
             int setVal2(int);
-            virtual bool jugement(Cellule*, int, int);
+            virtual bool jugement(Cellule*, int, int, Grille);
         private :
             int val1;
             int val2;

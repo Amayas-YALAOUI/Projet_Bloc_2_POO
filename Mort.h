@@ -5,7 +5,7 @@ namespace jdv {
     class Mort : public Cellule{
         public:
             Mort();
-            Cellule(int x,int y);
-            ~Mort();
+            Mort(int x,int y);
+            ~Mort() noexcept override = default;
     };
 }

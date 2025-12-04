@@ -17,11 +17,8 @@ namespace jdv{
         this->x=x;
         this->y=y;
     }
-    Cellule::~Cellule(){
 
-    }
-
-
-};
+    
+}
 
 
