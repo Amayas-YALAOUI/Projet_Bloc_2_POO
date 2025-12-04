@@ -18,7 +18,7 @@ namespace jdv {
         this->chemin = chemin;
     }
 
-    vector<vector<bool>> Chargement::charg(string) {
+    vector<vector<int>> Chargement::charg(string) {
         cout << "Entrez chemin d'accès :" << endl;
         cin >> chemin;
 
@@ -28,16 +28,16 @@ namespace jdv {
             cout << "Erreur chargement fichier" << endl;
         }
 
-        vector<vector<bool>> grille;
+        vector<vector<int>> grille;
         string ligneTexte;
         
         while (getline(fichier, ligneTexte)) {
-            vector<bool> ligneBool;
+            vector<int> ligneInt;
             string valeur = "";
 
             for (char c : ligneTexte) {
                 if (c == ',') {
-                    ligneBool.push_back(valeur == "1");
+                    ligneInt.push_back(valeur == "1");
                     valeur = "";
                 } else {
                     valeur += c;
@@ -45,10 +45,10 @@ namespace jdv {
             }
 
             if (!valeur.empty()) {
-                ligneBool.push_back(valeur == "1");
+                ligneInt.push_back(valeur == "1");
             }
 
-            grille.push_back(ligneBool);
+            grille.push_back(ligneInt);
         }
 
         fichier.close();

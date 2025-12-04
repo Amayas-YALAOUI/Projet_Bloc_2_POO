@@ -10,7 +10,7 @@ namespace jdv{
         public :
             Chargement();
             Chargement(string);
-            vector<vector<bool>>charg(string);
+            vector<vector<int>>charg(string);
             ~Chargement();
         private :
             string nom;
