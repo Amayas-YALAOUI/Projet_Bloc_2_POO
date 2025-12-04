@@ -7,6 +7,5 @@ namespace jdv {
             Mort();
             Cellule(int x,int y);
             ~Mort();
-        private:
     };
 }
