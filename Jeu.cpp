@@ -14,33 +14,33 @@ namespace jdv{
         Deces=Deces();
         Necro=Necro();
         Transformation=Transcellule();
-        Cellule=Cellule();
-        grrille = grille
-        for (size_t i = 0; i<size(grille[0]); i++){
-            for (size_t j = 0; j < size(grille); j++) {
-                bool Regle_survie = Survie.Jugement(Cellule* cell, int val1, int val2);
-                bool Regle_deces = Deces.Jugement(Cellule* cell, int val1, int val2);
-                bool Regle_naissance = Naissance.Jugement(Cellule* cell, int val1, int val2);
-                bool Regle_necro = Necro.Jugement(Cellule* cell, int val1, int val2);
-                Transition=Transformation.Transformation(Cellule,grrille);
+        get_grille=Grille.get_grille();
+        grille_copie = grille
+        for (size_t i = 0; i<size(grille); i++){
+            for (size_t j = 0; j < size(grille[0]); j++) {
+                *Cellule cell = get_grille[i][j];
+                bool Regle_survie = Survie.Jugement(*cell,val1,val2);
+                bool Regle_deces = Deces.Jugement(*cell,val1,val2);
+                bool Regle_naissance = Naissance.Jugement(*cell,val1,val2);
+                bool Regle_necro = Necro.Jugement(*cell,val1,val2);
                 if (Regle_survie == 1){
-                    return 1;
+                    continue;
                 }
                 if (Regle_deces == 1){
-                    Cellule[i][j]=Transition;
+                    Transformation.Transformation(*cell,grille_copie);;
                 }
                 if (Regle_naissance == 1){
-                    Cellule[i][j]=Transition;
+                    Transformation.Transformation(*cell,grille_copie);;
                 }
                 if (Regle_necro == 1){
-                    return 0;
+                    continue;
                 }
-                Population(Cellule, Grille[i]);
 
 
             }
 
     }
+    return grille_copie
 }
     Jeu::~Jeu(){
         
