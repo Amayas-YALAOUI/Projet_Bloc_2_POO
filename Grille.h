@@ -9,7 +9,7 @@ class Grille{
         ~Grille();
         int get_x();
         int get_y();
-        int get_grille();
+        std::vector<std::vector<*Cellule>> get_grille();
         void set_cellule(*Cellule);
     private:
         int x;

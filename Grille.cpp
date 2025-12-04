@@ -22,7 +22,7 @@ int Grille::get_y(){
     return y;
 }
 
-int Grille::get_grille(){
+std::vector<std::vector<*Cellule>> Grille::get_grille(){
     return grille;
 }
 void Grille::set_cellule(*Cellule cellule){
