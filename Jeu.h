@@ -6,6 +6,8 @@
 #include "TransCellule.h"
 #include "Adjacence.h"
 
+using namespace std;
+
 namespace jdv{
     class Jeu{
         public:
