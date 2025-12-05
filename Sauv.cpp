@@ -22,10 +22,13 @@ namespace jdv {
 
 
     void Sauvegarde::SauvegarderEtat(vector<vector<int>> grille) {
-        cout << "Entrez nom fichier : ";
-        cin >> nom;
         Etat s;
-        ofstream sauvegarde(nom + "_" + to_string(s.getCPT()));
+        string nom_fichier = nom;
+        if (nom_fichier.empty()) {
+            cout << "Entrez nom fichier : ";
+            cin >> nom_fichier;
+        }
+        ofstream sauvegarde(nom_fichier + "_" + to_string(s.getCPT()));
 
         if (!sauvegarde.is_open()) {
             cerr << "Erreur ouverture fichier" << endl;
@@ -43,6 +46,7 @@ namespace jdv {
         }
 
         sauvegarde.close();
+        s.incrementCPT();
     }
 
     Sauvegarde::~Sauvegarde() {}

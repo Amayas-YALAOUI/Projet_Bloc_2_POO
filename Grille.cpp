@@ -7,7 +7,7 @@ Grille::Grille(int x, int y){
     this-> x = x;
     this-> y = y;
     std::vector<Cellule*> a;
-    Cellule* b;
+    Cellule* b = nullptr;
     for (int i = 0; i<x; i++){
         grille.push_back(a);
         for (int j = 0; j<y; j++){

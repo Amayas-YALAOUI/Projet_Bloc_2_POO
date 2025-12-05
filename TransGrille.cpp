@@ -42,10 +42,14 @@ std::vector<std::vector<int>> TransGrille::Trans_cel_int(Grille grille){
     }
     for (int i = 0; i<x; i++){
         for (int j = 0; j<y; j++){
-            if (dynamic_cast<Vivant*>(grille.get_grille()[i][j])){
+            Cellule* cell = grille.get_grille()[i][j];
+            if (cell && dynamic_cast<Vivant*>(cell)){
                 grille_int[i][j] = 1;
             }
-            if (dynamic_cast<Mort*>(grille.get_grille()[i][j])){
+            else if (cell && dynamic_cast<Mort*>(cell)){
+                grille_int[i][j] = 0;
+            }
+            else {
                 grille_int[i][j] = 0;
             }
         }

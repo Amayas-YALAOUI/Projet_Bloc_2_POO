@@ -18,16 +18,13 @@ namespace jdv {
         this->chemin = chemin;
     }
 
-    vector<vector<int>> Chargement::charg(string) {
-        cout << "Entrez chemin d'accès :" << endl;
-        cin >> chemin;
+    vector<vector<int>> Chargement::charg(string chemin) {
 
         ifstream fichier(chemin);
 
         if (!fichier.is_open()) {
             cout << "Erreur chargement fichier" << endl;
         }
-
         vector<vector<int>> grille;
         string ligneTexte;
         
@@ -36,10 +33,12 @@ namespace jdv {
             string valeur = "";
 
             for (char c : ligneTexte) {
-                if (c == ',') {
-                    ligneInt.push_back(valeur == "1");
-                    valeur = "";
-                } else {
+                if (c == ',' || c == ';') {
+                    if (!valeur.empty()) {
+                        ligneInt.push_back(valeur == "1");
+                        valeur = "";
+                    }
+                } else if (c != ' ' && c != '\r') {
                     valeur += c;
                 }
             }

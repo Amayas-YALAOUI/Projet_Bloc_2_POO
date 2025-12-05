@@ -14,7 +14,7 @@ namespace jdv {
             int setVal1(int);
             int getVal2();
             int setVal2(int);
-            virtual bool jugement(Cellule*, int, int, Grille);
+            virtual bool jugement(Cellule*, Grille);
         private :
             int val1;
             int val2;

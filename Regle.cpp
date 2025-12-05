@@ -26,7 +26,7 @@ namespace jdv {
         return this->val2;
     }
 
-    bool Regle::jugement(Cellule*, int, int, Grille) {
+    bool Regle::jugement(Cellule*, Grille) {
         return false;
     }
 

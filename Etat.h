@@ -9,6 +9,7 @@ namespace jdv {
             Etat();
             ~Etat();
             int getCPT();
+            void incrementCPT();
             
         private :
             static int cpt;

@@ -9,8 +9,11 @@ using namespace std;
 namespace jdv {
     class Necro : public Regle {
         public :
-            Necro(int, int);
+            Necro();
             ~Necro();
-            bool jugement(Cellule*, int, int, Grille);
+            bool jugement(Cellule*, Grille);
+        private :
+            int val1;
+            int val2;
     };
 }

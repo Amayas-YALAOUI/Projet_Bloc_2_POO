@@ -13,4 +13,8 @@ namespace jdv {
     int Etat::getCPT(){
         return cpt;
     }
+    
+    void Etat::incrementCPT(){
+        cpt++;
+    }
 }

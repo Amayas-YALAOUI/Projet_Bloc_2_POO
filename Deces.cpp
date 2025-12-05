@@ -6,20 +6,21 @@
 using namespace std;
 
 namespace jdv {
-    Deces::Deces(int val1, int val2) {
+    Deces::Deces() {
         val1 = 2;
         val2 = 3;
     }
 
     Deces::~Deces() {}
 
-    bool Deces::jugement(Cellule* cell, int val1, int val2, Grille grille) {
-        Adjacence r;
-        if (r.Population(cell, grille) < val1 || r.Population(cell, grille) > val2){
-            return 1;
+    bool Deces::jugement(Cellule* cell, Grille grille) {
+        if (dynamic_cast<Vivant*>(cell)){
+            Adjacence r;
+            int neighbors = r.Population(cell, grille);
+            if (neighbors < 2 || neighbors > 3){
+                return 1;
+            }
         }
-        else {
-            return 0;
-        }
+        return 0;
     }
 }

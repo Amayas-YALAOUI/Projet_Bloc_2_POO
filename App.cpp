@@ -10,7 +10,7 @@ namespace jdv{
         Jeu j;
         vector<vector<int>> damier = c.charg(chemin);
         TransGrille Passage;
-        if (choix_etat=="Sauvegarde"){
+        if (choix_etat=="Sauvegarde" || choix_etat=="sauvegarde"){
             Sauvegarde s = Sauvegarde(nom, chemin);
             for (int i = 0; i < nb_it; i++){
                 Grille grille = Passage.Trans_int_cel(damier);
@@ -19,7 +19,7 @@ namespace jdv{
                 s.SauvegarderEtat(damier);
             }
         }
-        else if (choix_etat=="Affichage"){
+        else if (choix_etat=="Affichage" || choix_etat=="affichage"){
             GUI a(damier.size(), damier[0].size());
             for (int i = 0; i < nb_it; i++){
                 Grille grille = Passage.Trans_int_cel(damier);
@@ -33,5 +33,3 @@ namespace jdv{
         
     }
 }
-
-int main(){};

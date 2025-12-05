@@ -21,13 +21,13 @@ void GUI::Afficher(std::vector<std::vector<int>> damier){
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 if (damier[i][j] == 1){
-                    cell.setPosition(x * cellSize, y * cellSize);
+                    cell.setPosition(i * cellSize, j * cellSize);
                     window.draw(cell);
                 }
             }
         }
         window.display();
-        sf::sleep(sf::milliseconds(1000));
+        sf::sleep(sf::milliseconds(100));
     }   
 }
 

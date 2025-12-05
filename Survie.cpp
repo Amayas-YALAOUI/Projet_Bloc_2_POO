@@ -5,22 +5,23 @@
 using namespace std;
 
 namespace jdv {
-    Survie::Survie(int val1, int val2) {
+    Survie::Survie() {
         val1 = 3;
         val2 = 2;
     }
 
     Survie::~Survie() {}
 
-    bool Survie::jugement(Cellule* cell, int val1, int val2, Grille grille){
+    bool Survie::jugement(Cellule* cell, Grille grille){
         if (dynamic_cast<Vivant*>(cell)){
-        Adjacence r;
-        if (r.Population(cell, grille) <= val1 && r.Population(cell, grille) >= val2){
-            return 1;
-        }
-        else {
-            return 0;
-        }
+            Adjacence r;
+            int neighbors = r.Population(cell, grille);
+            if (neighbors == 2 || neighbors == 3){
+                return 1;
+            }
+            else {
+                return 0;
+            }
         }
         else {
             return 0;
