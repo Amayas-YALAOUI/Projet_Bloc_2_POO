@@ -8,7 +8,7 @@ using namespace std;
 namespace jdv {
     class Naissance : public Regle {
         public :
-            Naissance();
+            Naissance(int, int);
             ~Naissance();
             bool jugement(Cellule*, int, int, Grille);
     };

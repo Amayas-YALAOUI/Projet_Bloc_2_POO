@@ -5,7 +5,10 @@
 using namespace std;
 
 namespace jdv {
-    Survie::Survie() {}
+    Survie::Survie(int val1, int val2) {
+        val1 = 3;
+        val2 = 2;
+    }
 
     Survie::~Survie() {}
 
@@ -22,6 +25,7 @@ namespace jdv {
         else {
             return 0;
         }
+
 
 }
 }
