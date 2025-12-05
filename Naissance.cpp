@@ -15,7 +15,7 @@ namespace jdv {
     bool Naissance::jugement(Cellule* cell, Grille grille) {
         if (dynamic_cast<Mort*>(cell)){
             Adjacence r;
-            if (r.Population(cell, grille) == 3){
+            if (r.Population(cell, grille) <= val1 && r.Population(cell, grille) >= val2){
                 return 1;
             }
         }

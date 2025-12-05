@@ -11,8 +11,8 @@ TransGrille::TransGrille(){};
 TransGrille::~TransGrille(){};
 
 Grille TransGrille::Trans_int_cel(std::vector<std::vector<int>> grille_int){
-    int x = grille_int[0].size();
-    int y = grille_int.size();
+    int x = grille_int.size();
+    int y = grille_int[0].size();
     Grille grille_cel = Grille(x, y);
     for (int i = 0; i<x; i++){
         for(int j = 0; j<y; j++){

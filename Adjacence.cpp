@@ -15,10 +15,10 @@ int Adjacence::Population(Cellule* cellule, Grille grille){
     for (int i = -1; i <= 1; i++){
         for (int j = -1; j <= 1; j++){
             if (i == 0 && j == 0) continue;
-            // Wrapping avec modulo pour l'enveloppe toroïdale
             int x_a = ((x + i) % x_g + x_g) % x_g;
             int y_a = ((y + j) % y_g + y_g) % y_g;
             Cellule* neighbor = damier[x_a][y_a];
+
             if (neighbor && dynamic_cast<Vivant*>(neighbor)){
                 cpt += 1;
             }
