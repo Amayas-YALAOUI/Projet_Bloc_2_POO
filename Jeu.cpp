@@ -19,7 +19,6 @@ namespace jdv{
         for (size_t i = 0; i < get_grille.size(); ++i){
             for (size_t j = 0; j < get_grille[i].size(); ++j) {
                 Cellule* cell = get_grille[i][j];
-                // If the slot is empty, use a temporary Mort at this position for rule checks
                 Mort temp_dead(static_cast<int>(i), static_cast<int>(j));
                 Cellule* cell_for_rules = cell ? cell : &temp_dead;
                 
@@ -33,12 +32,10 @@ namespace jdv{
                     grille_copie.set_cellule(nv);
                 }
                 else if (Regle_naissance){
-                    // Cell is born
                     Cellule* nv = new Vivant(static_cast<int>(i), static_cast<int>(j));
                     grille_copie.set_cellule(nv);
                 }
                 else if (Regle_deces || Regle_necro){
-                    // Cell dies
                     Cellule* m = new Mort(static_cast<int>(i), static_cast<int>(j));
                     grille_copie.set_cellule(m);
                 }
