@@ -29,7 +29,7 @@ Grille TransGrille::Trans_int_cel(std::vector<std::vector<int>> grille_int){
     return grille_cel;
 }
 
-std::vector<std::vector<int>> Trans_cel_int(Grille grille){
+std::vector<std::vector<int>> TransGrille::Trans_cel_int(Grille grille){
     int x = grille.get_x();
     int y = grille.get_y();
     std::vector<int> a;

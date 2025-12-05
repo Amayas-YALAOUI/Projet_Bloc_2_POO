@@ -8,7 +8,6 @@ namespace jdv{
 class Grille{
     public:
         Grille(int, int);
-        ~Grille();
         int get_x();
         int get_y();
         std::vector<std::vector<Cellule*>> get_grille();

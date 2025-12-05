@@ -16,7 +16,7 @@ namespace jdv{
     class Jeu{
         public:
             Jeu();
-            vector<vector<Cellule*>> fonctionnement(Grille);
+            Grille fonctionnement(Grille);
             ~Jeu();
         private:
     };

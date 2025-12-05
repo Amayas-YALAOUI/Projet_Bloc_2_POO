@@ -10,7 +10,7 @@ namespace jdv{
 class GUI{
     public:
         GUI(int, int);
-        void Afficher(std::vector<std::vector<int>>, sf::RenderWindow &window);
+        void Afficher(std::vector<std::vector<int>>);
         ~GUI();
     private:
         int x;

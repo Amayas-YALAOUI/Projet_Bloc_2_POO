@@ -8,7 +8,7 @@ GUI::GUI(int x, int y){
     this->y = y;
 }
 
-void GUI::Afficher(std::vector<std::vector<int>> damier, sf::RenderWindow &window){
+void GUI::Afficher(std::vector<std::vector<int>> damier){
     sf::RenderWindow window(sf::VideoMode(x * cellSize, y * cellSize), "Game of Life");
     while (window.isOpen()) {
         sf::Event event;
@@ -30,4 +30,7 @@ void GUI::Afficher(std::vector<std::vector<int>> damier, sf::RenderWindow &windo
         sf::sleep(sf::milliseconds(1000));
     }   
 }
+
+GUI::~GUI() {}
+
 }

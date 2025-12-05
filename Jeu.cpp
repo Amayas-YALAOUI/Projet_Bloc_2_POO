@@ -8,7 +8,7 @@ namespace jdv{
     Jeu::Jeu(){
         
     }
-    vector<vector<Cellule*>> Jeu::fonctionnement(Grille grille){
+    Grille Jeu::fonctionnement(Grille grille){
         Survie s;
         Naissance na;
         Deces d;
@@ -40,7 +40,7 @@ namespace jdv{
                 }
             }
         }
-        return grille_copie.get_grille();
+        return grille_copie;
     }
     Jeu::~Jeu(){
         
