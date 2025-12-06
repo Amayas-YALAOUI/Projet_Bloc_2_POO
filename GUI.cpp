@@ -21,7 +21,7 @@ void GUI::Afficher(std::vector<std::vector<int>> damier){
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < y; j++) {
                 if (damier[i][j] == 1){
-                    cell.setPosition(i * cellSize, j * cellSize);
+                    cell.setPosition(j * cellSize, i * cellSize);
                     window.draw(cell);
                 }
             }
