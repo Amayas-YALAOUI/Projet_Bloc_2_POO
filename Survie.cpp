@@ -15,8 +15,8 @@ namespace jdv {
     bool Survie::jugement(Cellule* cell, Grille grille){
         if (dynamic_cast<Vivant*>(cell)){
             Adjacence r;
-            int neighbors = r.Population(cell, grille);
-            if (neighbors == 2 || neighbors == 3){
+            int voisin = r.Population(cell, grille);
+            if (voisin == 2 || voisin == 3){
                 return 1;
             }
             else {

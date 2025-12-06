@@ -28,6 +28,9 @@ namespace jdv{
                 a.Afficher(damier);
             }
         }
+        else{
+            std::cout << "Veuillez recommencer, choix non conforme" << std::endl;
+        }
     }    
     App::~App(){
         

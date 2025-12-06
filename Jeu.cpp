@@ -19,27 +19,24 @@ namespace jdv{
         for (size_t i = 0; i < get_grille.size(); ++i){
             for (size_t j = 0; j < get_grille[i].size(); ++j) {
                 Cellule* cell = get_grille[i][j];
-                Mort temp_dead(static_cast<int>(i), static_cast<int>(j));
-                Cellule* cell_for_rules = cell ? cell : &temp_dead;
-                
-                bool Regle_survie = s.jugement(cell_for_rules, grille);
-                bool Regle_deces = d.jugement(cell_for_rules, grille);
-                bool Regle_naissance = na.jugement(cell_for_rules, grille);
-                bool Regle_necro = ne.jugement(cell_for_rules, grille);
-
-                if (Regle_survie){
-                    Cellule* nv = new Vivant(static_cast<int>(i), static_cast<int>(j));
-                    grille_copie.set_cellule(nv);
+                Mort temp_mort(static_cast<int>(i), static_cast<int>(j));
+                Cellule* cell_pour_regle;
+                if (cell != nullptr) {
+                    cell_pour_regle = cell;
+                } else {
+                    cell_pour_regle = &temp_mort;
                 }
-                else if (Regle_naissance){
+                
+                bool Regle_survie = s.jugement(cell_pour_regle, grille);
+                bool Regle_deces = d.jugement(cell_pour_regle, grille);
+                bool Regle_naissance = na.jugement(cell_pour_regle, grille);
+                bool Regle_necro = ne.jugement(cell_pour_regle, grille);
+
+                if (Regle_survie || Regle_naissance){
                     Cellule* nv = new Vivant(static_cast<int>(i), static_cast<int>(j));
                     grille_copie.set_cellule(nv);
                 }
                 else if (Regle_deces || Regle_necro){
-                    Cellule* m = new Mort(static_cast<int>(i), static_cast<int>(j));
-                    grille_copie.set_cellule(m);
-                }
-                if (Regle_necro){
                     Cellule* m = new Mort(static_cast<int>(i), static_cast<int>(j));
                     grille_copie.set_cellule(m);
                 }

@@ -76,7 +76,6 @@ bool Test_Unitaire(int choix){
 }
 
 int main(){
-    jdv::Chargement Charg;
     string mode;
     int it;
     string nom;
@@ -94,7 +93,6 @@ int main(){
         } else {
             nom = "Display";
         }
-        vector<vector<int>> fichier_base = Charg.charg("/home/oussama-hamar/Documents/POO/Projet_Bloc_2_POO/test.csv");
         jdv::App App;
         App.Choix_Etat(mode, it, "/home/oussama-hamar/Documents/POO/Projet_Bloc_2_POO/test.csv", nom);
     }

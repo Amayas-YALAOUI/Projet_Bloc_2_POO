@@ -17,9 +17,9 @@ int Adjacence::Population(Cellule* cellule, Grille grille){
             if (i == 0 && j == 0) continue;
             int x_a = ((x + i) % x_g + x_g) % x_g;
             int y_a = ((y + j) % y_g + y_g) % y_g;
-            Cellule* neighbor = damier[x_a][y_a];
+            Cellule* voisine = damier[x_a][y_a];
 
-            if (neighbor && dynamic_cast<Vivant*>(neighbor)){
+            if (voisine && dynamic_cast<Vivant*>(voisine)){
                 cpt += 1;
             }
         }

@@ -9,7 +9,7 @@ GUI::GUI(int x, int y){
 }
 
 void GUI::Afficher(std::vector<std::vector<int>> damier){
-    sf::RenderWindow window(sf::VideoMode(x * cellSize, y * cellSize), "Game of Life");
+    sf::RenderWindow window(sf::VideoMode(x * cellSize, y * cellSize), "JEU DE LA VIE");
     while (window.isOpen()) {
         sf::Event event;
         while (window.pollEvent(event)) {
