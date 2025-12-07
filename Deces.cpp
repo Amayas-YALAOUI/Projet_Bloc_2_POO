@@ -17,7 +17,7 @@ namespace jdv {
         if (dynamic_cast<Vivant*>(cell)){
             Adjacence r;
             int voisin = r.Population(cell, grille);
-            if (voisin < 2 || voisin > 3){
+            if (voisin < val1 || voisin > val2){
                 return 1;
             }
         }

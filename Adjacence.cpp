@@ -27,3 +27,4 @@ int Adjacence::Population(Cellule* cellule, Grille grille){
     return cpt;
 }
 }
+ 
